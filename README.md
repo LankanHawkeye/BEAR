@@ -86,7 +86,7 @@ Note that, user has option to run BEAR with or without bootstrapping.
    
 Here is a command to run feature selection on sample input file "Randomized.iris.data.2.class.csv":
 
-bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv
+	bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv
 
 6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
    This script allows user to pick top n features for each base feature selection method by specifying a numeric argument. 
@@ -94,7 +94,7 @@ bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv
    
    For example, following script picks top 30 ranked features:
    
-   bash ./run_step_3_vennDiFeAEns_without_bootstrapping.sh 30
+   	bash ./run_step_3_vennDiFeAEns_without_bootstrapping.sh 30
    
 7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts.
 
@@ -102,10 +102,11 @@ Here is a sample code for stet 7:
 
 	bash ./run_step_4_clfEvaluation_without_bootstrapping.s	
 
-8. Final, step is to generate bar plots of selected AUC values. 
-e.g.,
-	bash ./run_step_5_barplots_without_bootstrapping.sh
-	
+8. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values:
+
+		bash ./run_step_5_barplots_without_bootstrapping.sh
+
+
 *Output file locations*
 *=====================*
 
@@ -130,16 +131,14 @@ Ranked Feature Sets - Calculated AUC Values (For Each Ranked Position) in Text F
 Bar Plots
 ./pipe_step_4_clf/result_bar_plots/
 
-**Running bash ./run_step_0_clean.sh** will remove the results in the folder (Recomended to use when you have copied the results to your own folders and ready to perform a new analysis).
+One finising step 8, **Running bash ./run_step_0_clean.sh** to remove the results in the folder (Recomended when user has copied all the results to his/her own folders and is ready to perform a new analysis).
 
 
 **Option 2: run BEAR with bootstrapping**
-This analysis path is selected only when the input file contains a large number of features (>2000). To follow this path, user should run the script with_bootsrap_run_pipeline.sh specifying an input.csv as the first argument.
-First of all, place your input file in folder ./input_file/.
-Make sure to rename it as input.csv.
 
-Next, run,
-	bash ./with_bootsrap_run_pipeline.sh ./input_file/input.csv
+Sample code for running feature selection with bootstrapping:
+
+	bash ./with_bootsrap_run_pipeline.sh ./input_file/Randomized.iris.data.2.class.csv
 	
 Then, user will be asked to specify the number of lines each bootstrap split should contain. To assist this decision, the script will show a table with percentages and line. Once user makes the decision and input the number, the script will create the splits and folders named after the splits. 
 
