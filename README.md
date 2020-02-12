@@ -90,14 +90,16 @@ bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv
 
 6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
    This script allows user to pick top n features for each base feature selection method by specifying a numeric argument. 
-   Then, five sets oftop n features will be used for Venn diagrams, feature aggregation, and feature ensemble.
+   Then, five sets of top n features will be used for Venn diagrams, feature aggregation, and feature ensemble.
    
    For example, following script picks top 30 ranked features:
    
    bash ./run_step_3_vennDiFeAEns_without_bootstrapping.sh 30
    
-7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all newly created re-ordered feature files. We are basically checking which order is going    to give us the best result. We pick the best result based on Area Under Curve (AUC) value of ROC curve. If there is a files with n number of features, the script will evaluate from position 1 to n, increamenting by 1. At each increment, program will evaluate and return an AUC value. For evaluation, we have used Complement Naive Bayes classifier, Random Forest Classifier, and Support Vector Machine classifier. A more advanced user can modify the parameter's of these classifiers by editing those python scripts.
-e.g.,
+7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts.
+
+Here is a sample code for stet 7:
+
 	bash ./run_step_4_clfEvaluation_without_bootstrapping.s	
 
 8. Final, step is to generate bar plots of selected AUC values. 
