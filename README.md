@@ -69,14 +69,8 @@ __________________________
 
 Note that, user has option to run BEAR with or without bootstrapping.
 
-	** Option 1. without bootstrapping **
-		
-	** Option 2. with bootstrapping **
-	
-	
-
-**Analysing the feature file without bootstrapping.**
-4. Place, the input file to be processed in the following folder.
+**Option 1: run BEAR without bootstrapping**
+4. Place your own data to be processed in the following folder.
 	Foldername:  input_file
 ---input file format--
 Input file is essentially a comma delimited file (csv) file.
@@ -145,8 +139,8 @@ Bar Plots
 
 **Running bash ./run_step_0_clean.sh** will remove the results in the folder (Recomended to use when you have copied the results to your own folders and ready to perform a new analysis).
 
-	
-**Analysing the feature file with bootstrapping.**
+
+**Option 1: run BEAR with bootstrapping**
 This analysis path is selected only when the input file contains a large number of features (>2000). To follow this path, user should run the script with_bootsrap_run_pipeline.sh specifying an input.csv as the first argument.
 First of all, place your input file in folder ./input_file/.
 Make sure to rename it as input.csv.
