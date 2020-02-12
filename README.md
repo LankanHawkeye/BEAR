@@ -53,10 +53,12 @@ __________________________
 	
 	
 	8. scipy 1.2.1
+		
 		Installation instructions: https://www.scipy.org/install.html
 		
 		
 	9. venn 0.1.3
+		
 		Installation instructions: https://pypi.org/project/venn/
 
 2. Unzip the zipped file.
