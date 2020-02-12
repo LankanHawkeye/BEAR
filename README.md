@@ -76,9 +76,9 @@ Note that, user has option to run BEAR with or without bootstrapping.
 	Foldername:  input_file
 	
 	
----input file format--
-Input file is essentially a comma delimited file (csv) file.
-It should contain features (attributes) and class labels.
+---input data format--
+
+The input data is essentially a comma delimited (csv) file containing features and class labels.
 class label column should be the last column of the csv file.
 The header of class label should be strictly "class".
 The class labels should only be binary.
