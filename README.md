@@ -66,11 +66,6 @@ __________________________
 
 2. Download the BEAR pipeline as a zipped file and unzip it to your machine.
 3. cd ./BEAR_CommandLine
-
-Note that, user has option to run BEAR with or without bootstrapping.
-
-**Option 1: run BEAR without bootstrapping**
-
 4. Place your own data to be processed in the following folder.
 
 	Foldername:  input_file
@@ -87,6 +82,11 @@ All other columns are features aka attributes.
 The header are feature names.
 Header names should be unique.
 The values can only be numeric (Obvious point).Since we are using Naive Bayes classifier, it is important that values are non-negative.
+
+
+Note that, user has option to run BEAR with or without bootstrapping.
+
+**Option 1: run BEAR without bootstrapping**
 
 
 5. Run the "run_step_1_and_2_fs_without_bootstrapping.sh" bash along with giving input file as the first argument.
