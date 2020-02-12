@@ -84,19 +84,19 @@ Note that, user has option to run BEAR with or without bootstrapping.
 5. Run the "run_step_1_and_2_fs_without_bootstrapping.sh" bash along with an input file as the first argument.
    This step will copy the input file into necessary processing folders, and then perform feature selection. Five base feature selection methods will be used, including 1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity. The output will be new reordered datasets according to feature rankings. The output will be available in folder "pipe_step_2_FS/pipe_step_2_output". This step will also prepare rquuired files for further processing by copying the reordered output files into other necessary folders.
    
-To run feature selection on sample input file "Randomized.iris.data.2.class.csv", plese use following code.
+Here is a command to run feature selection on sample input file "Randomized.iris.data.2.class.csv":
 
 bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv
 
-6. Next step is running "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
-   This script takes a numeric argument. User should provide the top number of features ranked to be investigated.
-   Then, only those ranked features will be considered for creating Venn diagrams, feature aggregates, and feature ensemble.
-   Feature ensemble uses a scoring function dependent on all used feature selection methods. 
-   e.g.,
-   Assuming user is interested in top 30 ranked features,
+6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
+   This script allows user to pick top n features for each base feature selection method by specifying a numeric argument. 
+   Then, five sets oftop n features will be used for Venn diagrams, feature aggregation, and feature ensemble.
+   
+   For example, following script picks top 30 ranked features:
+   
    bash ./run_step_3_vennDiFeAEns_without_bootstrapping.sh 30
    
-7. Next step is running "run_step_4_clfEvaluation_without_bootstrapping.sh". This step will convert the string class labels into numeric       binary labels. After, that it will evaluation all newly created re-ordered feature files. We are basically checking which order is going    to give us the best result. We pick the best result based on Area Under Curve (AUC) value of ROC curve. If there is a files with n number of features, the script will evaluate from position 1 to n, increamenting by 1. At each increment, program will evaluate and return an AUC value. For evaluation, we have used Complement Naive Bayes classifier, Random Forest Classifier, and Support Vector Machine classifier. A more advanced user can modify the parameter's of these classifiers by editing those python scripts.
+7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all newly created re-ordered feature files. We are basically checking which order is going    to give us the best result. We pick the best result based on Area Under Curve (AUC) value of ROC curve. If there is a files with n number of features, the script will evaluate from position 1 to n, increamenting by 1. At each increment, program will evaluate and return an AUC value. For evaluation, we have used Complement Naive Bayes classifier, Random Forest Classifier, and Support Vector Machine classifier. A more advanced user can modify the parameter's of these classifiers by editing those python scripts.
 e.g.,
 	bash ./run_step_4_clfEvaluation_without_bootstrapping.s	
 
