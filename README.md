@@ -64,16 +64,16 @@ __________________________
 		
 		Installation instructions: https://pypi.org/project/venn/
 
-2. Unzip the zipped file.
+2. Download the BEAR pipeline as a zipped file and unzip it to your machine.
 3. cd ./BEAR_CommandLine
 
-*Note that, user can choose to execute two analysis pathways.
+*Note that, user has option to run BEAR with or without bootstrapping.
 
-	**1. Analysing the feature file without bootstrapping.**
+	** Option 1. without bootstrapping.**
 	
 	 	We recommend this method for files with less than 2000 features.
 		
-	**2. Analysing the feature file with bootstrapping.**
+	** Option 2. Analysing the feature file with bootstrapping.**
 	
 		We recommend this method for files with larger number of features.*
 
