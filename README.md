@@ -65,4 +65,4 @@ bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv 3
 8. How to input the number of top-selected features for further investigation?
    You have to provide a value that is less than the total number of features being considered.   
    This value is given as the third argument of the following.      |
-	bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv 3 <--
+	bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv 3 
