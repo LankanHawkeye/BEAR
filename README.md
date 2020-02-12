@@ -67,15 +67,13 @@ __________________________
 2. Download the BEAR pipeline as a zipped file and unzip it to your machine.
 3. cd ./BEAR_CommandLine
 
-*Note that, user has option to run BEAR with or without bootstrapping.
+Note that, user has option to run BEAR with or without bootstrapping.
 
-	** Option 1. without bootstrapping.**
-	
-	 	We recommend this method for files with less than 2000 features.
+	** Option 1. without bootstrapping **
 		
-	** Option 2. Analysing the feature file with bootstrapping.**
+	** Option 2. with bootstrapping **
 	
-		We recommend this method for files with larger number of features.*
+	
 
 **Analysing the feature file without bootstrapping.**
 4. Place, the input file to be processed in the following folder.
