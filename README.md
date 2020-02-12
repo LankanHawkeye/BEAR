@@ -73,21 +73,13 @@ __________________________
 	
 ---input data format--
 
-The input data is essentially a comma delimited (csv) file containing features and class labels.
-class label column should be the last column of the csv file.
-The header of class label should be strictly "class".
-The class labels should only be binary.
-It is essential that class labels to be strings (i.e., two strings).
-All other columns are features aka attributes. 
-The header are feature names.
-Header names should be unique.
-The values can only be numeric (Obvious point).Since we are using Naive Bayes classifier, it is important that values are non-negative.
+The input data is essentially a comma delimited (csv) file containing features and class labels. The last column should be the class label. The header of last column should be strictly "class". Currently, only binary class labels are allowed. It is essential that class labels to be strings. All other columns are features aka attributes and their header are feature names. Identical feature names are not allowed. The values for features should be numeric. Since we are using Naive Bayes classifier, it is important that values are non-negative.
 
+A sample input data file "Randomized.iris.data.2.class.csv" can be found in "input_file" folder.
 
 Note that, user has option to run BEAR with or without bootstrapping.
 
 **Option 1: run BEAR without bootstrapping**
-
 
 5. Run the "run_step_1_and_2_fs_without_bootstrapping.sh" bash along with giving input file as the first argument.
    See the example. This step will copy the input file into necessary processing folders.
