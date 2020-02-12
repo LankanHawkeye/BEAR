@@ -105,4 +105,11 @@ Bar Plots
 
 	
 **Analysing the feature file with bootstrapping.**
+This analysis path is selected only when the input file contains a large number of features (>2000). To follow this path, user should run the script with_bootsrap_run_pipeline.sh specifying an input.csv as the first argument.
+First of all, place your input file in folder ./input_file/.
+Make sure to rename it as input.csv.
 
+Next, run,
+	bash ./with_bootsrap_run_pipeline.sh ./input_file/input.csv
+	
+Then, user will be asked to specify the number of lines (i.e., rows or observations) each bootstrap split should contain. To assist this decision, the script will show a table with percentages and line. Once user makes the decision and input the number, the script will create the splits and folders named after the splits. 
