@@ -6,7 +6,7 @@ BEAR (Bootstrap and Ensemble Attribute Ranking)
 
 =======================================================
 
-*This program will take a data file with attributes (features), their abundances and binary class labels, and pick top important attributes with respect to the class labels. This program will rank the features using five attribute selection programs (Person's correlatioin, Information Gain, Information Gain Ratio, Relief, Symmetrical Uncertainity). Then, it will use an in-house script to re-rank the attributes based on our ensemble scoring function. The program will evaluate the ranking of the features with Naive Bayes classifier, Support Vector Machine Classifier, and Random Forest Classifier. This program will handle large datasets using a bootsrapping strategy.* 
+*The BEAR program takes an input data file with attributes (features) and class labels, and applies bootstrap and ensemble strategies to select discriminative features with respect to the class labels. Features are ranked first using five base feature selection methods (Person's correlatioin, Information Gain, Information Gain Ratio, Relief, Symmetrical Uncertainity). Then, an ensemble method is used to aggregate five feature sets to obtain an ensemble set, which will be evaluated using three classifiers including Naive Bayes (NB), Support Vector Machine (SVM), and Random Forest (RF). This program will handle large datasets using a bootsrapping strategy.* 
 
 
 Installation Instructions
