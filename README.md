@@ -113,3 +113,7 @@ Next, run,
 	bash ./with_bootsrap_run_pipeline.sh ./input_file/input.csv
 	
 Then, user will be asked to specify the number of lines (i.e., rows or observations) each bootstrap split should contain. To assist this decision, the script will show a table with percentages and line. Once user makes the decision and input the number, the script will create the splits and folders named after the splits. 
+
+The script will copy the content of ./bootsrap_scripts/ folder into each newly created folder. This will create an stable  folder structure for further processing. After the running of the script, please access each newlyc created folder in ./pipe_step_1_Bootsrapping/ folder and run the run_pipeline.sh.
+e.g.,
+   bash ./run_pipeline.sh
