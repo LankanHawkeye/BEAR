@@ -28,14 +28,14 @@ __________________________
 	
 		Installation instructions: https://pypi.org/project/matplotlib-venn/
 		
-			or https://anaconda.org/conda-forge/matplotlib-venn
+		or https://anaconda.org/conda-forge/matplotlib-venn
 		
 		
 	4. numpy 1.16.3
 	
 		Installation instructions: https://scipy.org/install.html
 		
-			or https://anaconda.org/anaconda/numpy
+		or https://anaconda.org/anaconda/numpy
 		
 		
 	5. pandas 1.0.1
@@ -47,7 +47,7 @@ __________________________
 	
 		Installation instructions: https://pypi.org/project/python-weka-wrapper/
 		
-			or https://fracpete.github.io/python-weka-wrapper/install.html
+		or https://fracpete.github.io/python-weka-wrapper/install.html
 		
 		
 	7. scikit-learn 0.20.3
