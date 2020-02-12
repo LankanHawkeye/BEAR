@@ -92,9 +92,13 @@ __________________________
 3. cd ./BEAR_CommandLine
 
 *Note that, user can choose to execute two analysis pathways.
+
 	**1. Analysing the feature file without bootstrapping.**
+	
 	 	We recommend this method for files with less than 2000 features.
+		
 	**2. Analysing the feature file with bootstrapping.**
+	
 		We recommend this method for files with larger number of features.*
 
 **Analysing the feature file without bootstrapping.**
