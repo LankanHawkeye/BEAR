@@ -84,7 +84,7 @@ Note that, user has option to run BEAR with or without bootstrapping.
 5. Run the "run_step_1_and_2_fs_without_bootstrapping.sh" bash along with giving input file as the first argument.
    See the example. This step will copy the input file into necessary processing folders.
    And, the script will rank the input features according to their inportance.
-   We are using 5 feature selection methods: 1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief,  5.     Symmetrical Uncertainity. The output will be new reordered datasets according to feature rankings. The output will be available in ./ pipe_step_2_FS/pipe_step_2_output/. This script will further copy the reordered output files into other folders for further processing.
+   We are using 5 feature selection methods: 1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5.     Symmetrical Uncertainity. The output will be new reordered datasets according to feature rankings. The output will be available in ./ pipe_step_2_FS/pipe_step_2_output/. This script will further copy the reordered output files into other folders for further processing.
    
 	e.g., We have provided you an example data set called "Randomized.iris.data.2.class.csv".
      	      You will find it in the folder ./input_file/
