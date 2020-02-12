@@ -41,17 +41,6 @@ The header are feature names.
 Header names should be unique.
 The values can only be numeric (Obvious point).Since we are using Naive Bayes classifier, it is important that values are non-negative.
 
-An example input csv file is shown below, within dashed lines.
-
-
-attrib1  attrib2 .. attrib_n  class     
-10	 34	 .. 21	      Treatment
-23	 24	 .. 23        Treatment
-34	 56	 .. 54        Treatment
-45	 21	 .. 23        Control
-54	 87	 .. 11        Control
-32 	 23	 .. 23	      Control
-
 
 5. Run the "run_pipeline.sh" bash along with giving input file as the first argument.
    See the example.
