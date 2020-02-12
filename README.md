@@ -13,20 +13,15 @@ BEAR (Bootstrap and Ensemble Attribute Ranking)
 
 Installation Instructions
 __________________________
-1. Following are the dependencies of BEAR tool.
+1. Following are the dependencies of BEAR tool, please installl them first.
 	
 	1. javabridge 1.0.18
 	
-		Installation instructions
-		
-		https://fracpete.github.io/python-weka-wrapper/install.html
-	
+		Installation instructions: https://fracpete.github.io/python-weka-wrapper/install.html
 	
 	2. matplotlob 3.1.3
 	
-		Installation instructions
-		
-		https://matplotlib.org/users/installing.html
+		Installation instructions: https://matplotlib.org/users/installing.html
 	
 	
 	3. matplotlib-venn 0.11.5
