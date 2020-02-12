@@ -11,8 +11,6 @@ import sys
 
 # thre cutoff needs to be the same value
 
-
-
 print("Venn Diagram Creation and Feature Aggregate Creation Started.")
 default_val = sys.argv[1]
 # The argument is taken as string

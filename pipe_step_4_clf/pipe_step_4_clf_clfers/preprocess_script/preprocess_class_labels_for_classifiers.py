@@ -64,7 +64,7 @@ def feature_preprocess(path):
     #     print(class_labels_in_all[1] + " will be modified as 1")
     #     print(os.system("for f in *csv;do sed -i -e 's#'{0}'#1#g' $f;done".format(class_labels_in_all[1])))
     #     print(os.system("for f in *csv;do sed -i -e 's#'{0}'#0#g' $f;done".format(class_labels_in_all[0])))
-    #     os.system("rm *e")
+    #    os.system("rm *e")
 
 
 feature_preprocess("./../NB/")

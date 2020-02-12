@@ -24,6 +24,8 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 
+
+
 #from sys import platform as sys_pf
 #if sys_pf == 'darwin':
     #import matplotlib
@@ -144,6 +146,10 @@ for filepicker in range(0, len(csvFiles)):
     #print(xaxis)
     #plt.figure()
     # plt.plot([0, 1], [0, 1], 'k--')
+    font = {
+            'size': 6}
+
+    matplotlib.rc('font', **font)
 
     lw = 2
     # plt.plot(fpr_rf, tpr_rf, label='ROC curve of class {0} (area = {1:0.2f})' ''.format(i, roc_auc[i]))

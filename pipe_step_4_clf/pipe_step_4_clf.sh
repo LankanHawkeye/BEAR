@@ -1,3 +1,5 @@
+read -p "Press [Enter] about to preprocess labels"
+
 cd ./pipe_step_4_clf_clfers/preprocess_script/
 # Following three preprocessing steps are required before classifier action
 /usr/local/bin/python3.7 preprocess_class_labels_for_classifiers.py
