@@ -167,6 +167,6 @@ Next, run,
 	
 Then, user will be asked to specify the number of lines (i.e., rows or observations) each bootstrap split should contain. To assist this decision, the script will show a table with percentages and line. Once user makes the decision and input the number, the script will create the splits and folders named after the splits. 
 
-The script will copy the content of ./bootsrap_scripts/ folder into each newly created folder. This will create an stable  folder structure for further processing. After the running of the script, please access each newlc created folder in ./pipe_step_1_Bootsrapping/ folder and run the run_pipeline.sh. This will generate feature aggregates and feature ensembles. And, each one of them will be evaulation using Naive Bayes classifier, Support Vector Machine Classifier, and Random Forest Classifier.
+The script will copy the content of ./bootsrap_scripts/ folder into each newly created folder. This will create an stable  folder structure for further processing. After the running of the script, please access each newly created folders in ./pipe_step_1_Bootsrapping/ folder and run the run_pipeline.sh. This will generate feature aggregates and feature ensembles. And, each one of them will be evaulation using Naive Bayes classifier, Support Vector Machine Classifier, and Random Forest Classifier.
 e.g.,
    bash ./run_pipeline.sh
