@@ -77,5 +77,31 @@ e.g.,
 e.g.,
 	bash ./run_step_5_barplots_without_bootstrapping.sh
 	
+*Output file locations*
+*=====================*
+
+Feature Ranked input files
+./pipe_step_2_FS/pipe_step_2_output/
+
+Venn Diagrams and Ranked Feature Combinations
+./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDiagram/
+
+Feature Ensemble Generated Using Scoring Function
+./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/ensemble_output/
+
+Ranked Feature Combinations
+./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/
+
+Ranked Feature Sets - Evaluations Using Classifiers
+./pipe_step_4_clf/result_classifier_evalutions/
+
+Ranked Feature Sets - Calculated AUC Values (For Each Ranked Position) in Text Files
+./pipe_step_4_clf/result_auc_for_each_position/"
+
+Bar Plots
+./pipe_step_4_clf/result_bar_plots/
+
+
+	
 **Analysing the feature file with bootstrapping.**
 
