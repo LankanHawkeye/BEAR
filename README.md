@@ -15,16 +15,15 @@ Installation Instructions
 
 
 	Following are the dependencies of BEAR tool.
-	1. javabridge
-	2. matplotlob
-	3. matplotlib-venn
-	4. numpy
-	5. pandas
-	6. python-weka-wrapper
-	7. scikit-learn
-	8. scipy
-	9. sklearn
-	10. venn
+	1. javabridge 1.0.18
+	2. matplotlob 3.1.3
+	3. matplotlib-venn 0.11.5
+	4. numpy 1.16.3
+	5. pandas 1.0.1
+	6. python-weka-wrapper 0.1.12
+	7. scikit-learn 0.20.3
+	8. scipy 1.2.1
+	9. venn 0.1.3
 
 2. Unzip the zipped file.
 3. cd ./BEAR_CommandLine
