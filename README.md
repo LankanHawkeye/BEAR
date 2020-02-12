@@ -10,7 +10,7 @@ BEAR (Bootstrap and Ensemble Attribute Ranking)
 
 
 Installation Instructions
-.................
+__________________________
 1. Install following dependencies first.
 
 
