@@ -70,8 +70,10 @@ __________________________
 Note that, user has option to run BEAR with or without bootstrapping.
 
 **Option 1: run BEAR without bootstrapping**
+
 4. Place your own data to be processed in the following folder.
 	Foldername:  input_file
+	
 ---input file format--
 Input file is essentially a comma delimited file (csv) file.
 It should contain features (attributes) and class labels.
