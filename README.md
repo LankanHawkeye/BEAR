@@ -31,7 +31,7 @@ Installation Instructions
 	1. Analysing the feature file without bootstrapping.
 	 	We recommend this method for files with less than 2000 features.
 	2. Analysing the feature file with bootstrapping.
-		We recommend this method for files with larger number of features.
+		We recommend this method for files with larger number of features.*
 
 **Analysing the feature file without bootstrapping.**
 4. Place, the input file to be processed in the following folder.
