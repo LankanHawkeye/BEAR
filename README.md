@@ -136,11 +136,11 @@ One finising step 8, **Running bash ./run_step_0_clean.sh** to remove the result
 
 **Option 2: run BEAR with bootstrapping**
 
-Sample code for running feature selection with bootstrapping:
+First, run feature selection with bootstrapping:
 
 	bash ./with_bootsrap_run_pipeline.sh ./input_file/Randomized.iris.data.2.class.csv
 	
-Then, user will be asked to specify the number of lines each bootstrap split should contain. To assist this decision, the script will show a table with percentages and line. Once user makes the decision and input the number, the script will create the splits and folders named after the splits. 
+Then, user has to specify the sample size of each of bootstrapped sample subsets. The bootstrapped sample subsets are generated and stored in subfolders of ./bootsrap_scripts/. 
 
 The script will copy the content of ./bootsrap_scripts/ folder into each newly created folder. This will create an stable  folder structure for further processing. After the running of the script, please access each newly created folders in ./pipe_step_1_Bootsrapping/ folder and run the run_pipeline.sh. This will generate feature aggregates and feature ensembles. And, each one of them will be evaulation using Naive Bayes classifier, Support Vector Machine Classifier, and Random Forest Classifier.
 e.g.,
