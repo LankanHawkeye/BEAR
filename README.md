@@ -13,11 +13,7 @@ BEAR (Bootstrap and Ensemble Attribute Ranking)
 
 Installation Instructions
 __________________________
-1. Install following dependencies first.
-
-
-
-	Following are the dependencies of BEAR tool.
+1. Following are the dependencies of BEAR tool.
 	
 	1. javabridge 1.0.18
 	
