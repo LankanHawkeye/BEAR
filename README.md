@@ -150,4 +150,16 @@ Once finising step 8, **Running bash ./run_step_0_clean.sh** to remove the resul
    
    	bash ./run_bootstrapping_substep_1.sh input_file/Randomized.iris.data.2.class.csv 0.3 10 yes
 	
-	During execution of the script, user will be shown some useful information
+	During execution of the script, user will be shown some useful information.
+	1. Number of features in input file.
+	2. Number of samples in input file.
+	3. User-specified sampling fraction.
+	4. User-specified number of bootstrap samples.
+	5. The class labels.
+	6. positive class label (indicated as 1).
+	7. Table of feature aggregates created as a result of bootstrapping.
+		This table contains the number of features each aggregate contains. The same information will be shown as percentage.
+		This is to help the user to pick the optimum aggregate user wants to further investigate.
+	At the end of the execution of this script, user will be asked to run the next script.
+	
+	2. 
