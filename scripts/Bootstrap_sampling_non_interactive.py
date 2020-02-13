@@ -54,7 +54,7 @@ print("Sampling fraction is set to "+ str(SampFrac))
 print("--------------------------------------------------")
 print("")
 #Number_of_samples = int(input("What's the No. of samples to be drawn for bootstrapping? : "))
-#print("No. of samples to be drawn is set to "+ str(Number_of_samples))
+print("No. of samples to be drawn is set to "+ str(Number_of_samples))
 print("--------------------------------------------------")
 print("")
 print("")
@@ -269,7 +269,7 @@ for l in range(0,counter_to_index_threshold):
     #print(sample_dictionary[key])
     sets.append(set(sample_dictionary[key]))
 
-print(os.getcwd())
+#print(os.getcwd())
 
 #os.chdir('./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDiagram/')
 
@@ -309,7 +309,7 @@ for comboSize in range(1,len(sets)+1):
     os.chdir(working_dir)
 
     os.chdir('./pipe_step_1_Bootstrapping/output_feature_aggregates/')
-    print(os.getcwd())
+    #print(os.getcwd())
     #print(os.getcwd())
 
     #print(os.getcwd())
