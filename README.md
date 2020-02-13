@@ -136,13 +136,18 @@ Once finising step 8, **Running bash ./run_step_0_clean.sh** to remove the resul
 
 **Option 2: run BEAR with bootstrapping**
 
-First, run feature selection with bootstrapping:
+1. To run BEAR with bootstrapping, you must run the script run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments.
 
-	bash ./with_bootsrap_run_pipeline.sh ./input_file/Randomized.iris.data.2.class.csv
+   argument 1 = input csv file.
+   
+   argument 2 = Sampling Fraction: Fraction of the features to be used. This should strictly be a value between 0 and 1. It can be 1 as   well. 
+   
+   argument 3 = Number of bootstrap samples to draw from data file. This value should strictly be integer.
+   
+   argument 4 = This argument should be specified as yes or no. Here, user has the chance to specify the positive class. If you provide yes as the fourth argument, it will assign one of the class labels as positive class and the other one as the negative one. If you provided no as the argument, the opposite will happen. Use will be displayed which class was assigned as positive class. 
+   
+   e.g., 
+   
+   	bash ./run_bootstrapping_substep_1.sh input_file/Randomized.iris.data.2.class.csv 0.3 10 yes
 	
-Then, user has to specify the sample size of each of bootstrapped sample subsets. The bootstrapped sample subsets are generated and stored in subfolders of ./bootsrap_scripts/. Please access to each newly created subfolder in ./pipe_step_1_Bootsrapping/ folder and run run_pipeline.sh:
-
-	bash ./run_pipeline.sh
-
-This will generate feature aggregates and feature ensembles for each sample subset. 
-
+	During execution of the script, user will be shown some useful information
