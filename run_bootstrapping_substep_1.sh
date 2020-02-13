@@ -1,5 +1,9 @@
 #./run_bootstrapping.sh input_file/Randomized.iris.data.2.class.csv 0.3 10 yes
 
+mkdir -p pipe_step_1_Bootstrapping
+mkdir -p pipe_step_1_Bootstrapping/input_file
+mkdir -p pipe_step_1_Bootstrapping/output_feature_aggregates
+
 rm -f -v ./pipe_step_2_FS/pipe_step_2_output/*csv
 rm -f -v ./pipe_step_3_FAggregation/pipe_step_3_Fselected_input/*csv
 rm -f -v ./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDiagram/*pdf
