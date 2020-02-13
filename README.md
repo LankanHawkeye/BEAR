@@ -131,7 +131,7 @@ Ranked Feature Sets - Calculated AUC Values (For Each Ranked Position) in Text F
 Bar Plots
 ./pipe_step_4_clf/result_bar_plots/
 
-One finising step 8, **Running bash ./run_step_0_clean.sh** to remove the results in the folder (Recomended when user has copied all the results to his/her own folders and is ready to perform a new analysis).
+Once finising step 8, **Running bash ./run_step_0_clean.sh** to remove the results in the folder (Recomended when user has copied all the results to his/her own folders and is ready to perform a new analysis).
 
 
 **Option 2: run BEAR with bootstrapping**
