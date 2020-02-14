@@ -9,7 +9,7 @@ echo "Venn Diagram Creation and Feature Aggregation Started."
 /usr/local/bin/python3.7 create_venn.py $1
 cd ../..
 echo ""
-echo "Venn Diagram Creation and Feature Aggregation Complete."
+#echo "Venn Diagram Creation and Feature Aggregation Complete."
 echo "=========================="
 
 echo ""
@@ -18,7 +18,7 @@ cd ./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/
 /usr/local/bin/python3.7 ensemble_weighting.py
 cd ../
 echo ""
-echo "Feature Ensemble Creation Complete."
+#echo "Feature Ensemble Creation Complete."
 
 echo ""
 scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/NB/
