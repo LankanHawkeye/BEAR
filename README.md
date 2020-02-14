@@ -95,7 +95,11 @@ The input data is essentially a comma delimited (csv) file containing features a
 
 A sample input data file "Randomized.iris.data.2.class.csv" can be found in "input_file" folder.
 
-Note that, user has option to run BEAR with or without bootstrapping.
+Note that, user has option to run BEAR with or without bootstrapping. 
+
+	We have created an interactive script to walk you through the first steps of each of the two steps. This will give the user a substantial idea about the arguments being passed into the scripts at the very begining. To start the interactive mode, run "Start_interactive_mode.sh" bash script. This script will interact with user to get the parameters and file selection.
+	
+	bash ./Start_interactive_mode.sh
 
 **Option 1: run BEAR without bootstrapping**
 
@@ -206,7 +210,7 @@ Once finising step 8, **Running bash ./run_step_0_clean.sh** to remove the resul
 
 **Option 2: run BEAR with bootstrapping**
 
-1. To run BEAR with bootstrapping, you must run the script run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments.
+1. To run BEAR with bootstrapping, you must run the script run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments. Please, note that each time this method will generate different results due to randomness of sampling.
 
    argument 1 = input csv file.
    
