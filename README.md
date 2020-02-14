@@ -72,14 +72,18 @@ __________________________
 	
 3. Access the BEAR-master folder and run Install.sh. 
 	
+	```
 	cd ./BEAR-master 
+	```
 	
+	```
 	bash ./Install.sh
-	
+	```
 	or
 	
+	```
 	sudo ./Install.sh
-	
+	```
 4. Place your own data to be processed in the following folder.
 
 	Foldername:  input_file
@@ -208,6 +212,8 @@ Once finising step 8, **Running bash ./run_step_0_clean.sh** to remove the resul
 2. In this step, user need to provide the file to be used to further processing. User should run the bash script named ./run_bootstrapping_substep_2.sh. Then, the program will prompt user an enumerated menu of file aggregates created. User has to select the number from the table and hit enter. This will copy the chosen file to the folder next up for processing.
 
 e.g., 
+	```
 	bash ./run_bootstrapping_substep_2.sh
+	```
 	
 3. Next Step is to run the feature selection. Please, follow the above procedure from Feature selection.
