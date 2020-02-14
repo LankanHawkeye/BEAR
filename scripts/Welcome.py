@@ -1,4 +1,5 @@
-# File created by Miyuraj Harishchandra Hikkaduwa Withanage
+# Created by Miyuraj Harishchandra Hikkaduwa WIthanage
+
 import os
 import pandas as pd
 import glob
@@ -75,6 +76,9 @@ if option1 == 1:
     # To copy the file, I had to chdir to the destination directory
     # otherwise, it will not copy
     os.system("scp {0} {1}".format(str(csv_option_list_help_list[chosen_file - 1]), destination_file))
+    print("Next Step is to run the feature selection. ")
+    print("Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (See https://github.com/biocoms/BEAR/blob/master/README.md)")
+    print("6. Run the run_step_3_vennDiFeAEns_without_bootstrapping.sh")
     exit()
 
 elif option1 == 2:
@@ -125,10 +129,11 @@ elif option1 == 2:
     import Bootstrap_sampling
     exec('Bootstrap_sampling')
 
-
+    print("Next Step is to run the feature selection. ")
+    print(
+        "Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (See https://github.com/biocoms/BEAR/blob/master/README.md)")
+    print("6. Run the run_step_3_vennDiFeAEns_without_bootstrapping.sh")
     exit()
-    #copyfile(csv_option_list_help_list[chosen_file - 1], './pipe_step_2_FS/pipe_step_2_input/input.csv')
-    print("")
 
 else:
     print("You did not enter a valid option.")
