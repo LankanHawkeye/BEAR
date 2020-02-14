@@ -135,7 +135,7 @@ Note that, user has option to run BEAR with or without bootstrapping.
 
 **Option 1: run BEAR without bootstrapping**
 
-5. Run the "run_step_1_file_processing_withoutB.sh" bash along with an input file as the first argument. This step will copy the input file into necessary processing folders. It will take the input csv file as its first command line argument.
+5. Run the "run_step_1_file_processing_withoutB.sh" bash along with an input file as the first argument. This step will copy the input file into necessary processing folders. It takes the input csv file as its first command line argument.
 Here is an example command to run preprocessing on sample input file "Randomized.iris.data.2.class.csv":
 
 ```
@@ -143,7 +143,7 @@ bash ./run_step_1_file_processing_withoutB.sh nput_file/Randomized.iris.data.2.c
 ```
  
  6. Run the "run_step_2_FeatureSelection.sh" bash
-   and then perform feature selection. Five base feature selection methods will be used, including 1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity. The output will be new reordered datasets according to feature rankings. The output will be available in folder "pipe_step_2_FS/pipe_step_2_output". This step will also prepare required files for further processing by copying the reordered output files into other necessary folders.
+   and then perform feature selection. Five base feature selection methods are used, including 1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity. The output is new reordered datasets according to feature rankings. The output is available in folder "pipe_step_2_FS/pipe_step_2_output". This step prepares required files for further processing by copying the reordered output files into other necessary folders.
    
 ```
 bash ./run_step_2_FeatureSelection.sh
@@ -154,10 +154,10 @@ Output files:
  
    Description: 
 	
-   The output files are five csv files each with features re-ordered according to feature ranksings (1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity). The final column of the csv file contain the class labels.
+   The outcomes are five csv files each with features re-ordered according to feature ranksings (1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity). The final column of the csv file contains the class labels.
 	
-	** Left most columns of csv files will contain top ranked where as the right most columns will contain low ranked features. 
-	We will be using this tradition throughout the description. **
+	** Features in csv file are sorted with a decreasing order of rankings based on feature selection method.
+	We will keep this format throughout the pipeline. **
 	
 
 7. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
@@ -174,25 +174,27 @@ A. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDia
 	
    Description: 
 		
-   There will a PDF file of a 5-way Venn diagram and, 
-   a text file containing features that belongs to the different portions of the Venn diagram.
+   There is a PDF file recording a 5-way Venn diagram and, 
+   a text file containing features belonging to the different parts of the Venn diagram.
 			
 B. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/
 	
 Description: 
-	This output location will contain five different feature aggregates: 1). at_Least.1.csv, 2). at_Least.2.csv, 3).at_Least.3.csv, 4). at_Least.4.csv, 5).at_Least.5.csv.
+	This output location contains results of five different feature aggregates: 1). at_Least.1.csv, 2). at_Least.2.csv, 3).at_Least.3.csv, 4). at_Least.4.csv, 5).at_Least.5.csv.
 			The file at_Least.1.csv is same as the union of features.
+			The file at_Least.2.csv contains all features that are present in at least 2 feature selection methods.
+   			The file at_Least.3.csv contains all features that are present in at least 3 feature selection methods.
+			The file at_Least.4.csv contains all features that are present in at least 4 feature selection methods.
 			The file at_Least.5.csv the same as the intersection of features.
-			What are at_Least files in general? For an example, what is at_Least.3.csv file? It contains all features that are present in at least 3 feature selection methods out of the five being considered. We do not consider which three feature selection methods. Any feature in that file has to be present in at least any 3 of the feature selection methods. This is a heuristic we use to narrow down our feature space.
+			
 			
  C. Location --> ./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/ensemble_output/
 		
    Description: 
 		
-   There will be two files in this folder. One is a feature ensemble csv file. Other one is a csv file with ensemble scores. Feature ensemble is created using feature ensemble scoring function. each and every the features is given a score based on the ranking based on five feature selection methods. A feature ranked as one of the top features by multiple methods get a higher score thus, they will be treated as important features by the scoring function. Then, all the features are re-ordered in descending order of the enseble score. The ensemble scoring matrix is the other csv file. 
-		
+   There are two files in this folder. One is a feature ensemble csv file. The other is a csv file with ensemble scores. Feature ensemble is created using a feature ensemble scoring function based on the rankings of five base feature selection methods. A feature ranked higher by multiple methods will receive a higher ensemble score. 
    
-8. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
+8. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all selected feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter sets are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
 
 Here is a sample code for stet 7:
 
@@ -203,17 +205,17 @@ A. Location: --> ./pipe_step_4_clf/result_classifier_evalutions/
 		
    Description: 
 		
-   This folder will contain three PDF image files. They are graphs of AUC values progressively calculated over the ranks (X axis) from top ranks to low ranks. Y axis represent the AUC value reported.
+   This folder contains three PDF files. They are graphs of AUC values (Y axis) progressively calculated using features over the sorted ranks (X axis).
 		
 B. Location: --> ./pipe_step_4_clf/result_auc_for_each_position/
 		
    Description: 
 		
-   This folder will contain a text file with file names and AUC values. 
+   This folder contains a text file with file names and AUC values. 
 		
 	
 
-9. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values. When this step is executed, the program will search the folder where it saves the classifier evaulation results to retrieve the AUC values of ROC curves. Then, it will list those files along with the number of times each ranked and re-ordered file was evaluated for an AUC. Please, recall that you have specified the top number of features (less than the total number of features in input file) during the step 6. Depending on this value, the range of top feature values that we can generate bar plots can be different. For an example, if a user specifies too low number of top features to be investigated, it is possible the feature aggregate called At_Least5.csv to have too few number of features. It is possible that top few features ranked by five feature selection methods to not have a large intersection. Following this logic, the ability to create bar plot for a wide range of feature sets may be limited. In other words, although certain feature ranked files may generate AUC values for the entire range of the features, there will be some aggregates where there will be few number of features. If there is no data points for some of the files for a high value of top features, bar charts will not be created for that top features.
+9. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values. When this step is executed, the program searches for the folder where it saves the classifier evaulation results to retrieve the AUC values of ROC curves. Then, it will list those files along with the number of times each ranked and re-ordered file was evaluated for an AUC. Please, recall that you have specified the top number of features (less than the total number of features in input file) during the step 6. Depending on this value, the range of top feature values that we can generate bar plots can be different. For an example, if a user specifies too low number of top features to be investigated, it is possible the feature aggregate called At_Least5.csv to have too few number of features. It is possible that top few features ranked by five feature selection methods to not have a large intersection. Following this logic, the ability to create bar plot for a wide range of feature sets may be limited. In other words, although certain feature ranked files may generate AUC values for the entire range of the features, there will be some aggregates where there will be few number of features. If there is no data points for some of the files for a high value of top features, bar charts will not be created for that top features.
 
 		bash ./run_step_5_barplots_without_bootstrapping.sh
 
