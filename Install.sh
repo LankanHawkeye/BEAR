@@ -1,3 +1,4 @@
+mkdir -p ./configuration
 mkdir -p ./pipe_step_1_Bootstrapping
 mkdir -p ./pipe_step_1_Bootstrapping/input_file
 mkdir -p ./pipe_step_1_Bootstrapping/output_feature_aggregates
@@ -22,6 +23,7 @@ mkdir -p ./pipe_step_4_clf/pipe_step_4_clf_clfers/NB
 mkdir -p ./pipe_step_4_clf/result_auc_for_each_position
 mkdir -p ./pipe_step_4_clf/result_classifier_evalutions
 
+scp ./scripts/configuration.py ./configuration/configuration.py
 
 scp ./scripts/Correlation_Fselection.py ./pipe_step_2_FS/pipe_step_2_scripts/Correlation_Fselection.py
 scp ./scripts/SymmetricalUncert_Fselection.py ./pipe_step_2_FS/pipe_step_2_scripts/SymmetricalUncert_Fselection.py
