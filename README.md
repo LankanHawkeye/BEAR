@@ -74,9 +74,12 @@ __________________________
 	
 	```
 	cd ./BEAR-master 
+
 	```
+	Make the Install.sh file an executable file. You may have to execute these as sudo commands.
+	```
+	sudo chmod +x Install.sh
 	
-	```
 	bash ./Install.sh
 	```
 	or
@@ -96,6 +99,22 @@ __________________________
 		nano ./configuration/configuration.py
 		
 		After saving the file, you can start running the program. Each program will place the configuration file in the relevent folder (./pipe_step_2_FS/pipe_step_2_scripts/) as the first thing. You can manually check and place this file in relevent location to make sure if you wish. 
+		
+ *Setting your Python Interpreter.*
+The default location for python interpreter for these scripts is 
+
+		/usr/local/bin/python3.7
+
+Depending on your python installation and dependencies, this location can vary. Because of that, you must use changer.sh script to set the python path correctly. changer.sh script should strictly be placed in BEAR-master working folder. Do not mess with this script.
+	First, make the changer.sh executable file as follows.
+	
+			sudo chmod +x changer.sh
+			
+  Next, you should find the location of correct python interpretor. And, pass that location as an argument to the changer.sh in the following way. Let's assume that you had used anaconda package manager to install the dependencies of BEAR. Your working python interpreter could be located as /anaconda3/bin/python.
+  e.g.,
+  		bash ./changer.sh /anaconda3/bin/python
+
+If you accidentally make a mistake when entering the python location, you will have to re-install the whole thing.
 
 4. Place your own data to be processed in the following folder.
 
