@@ -194,7 +194,7 @@ Description:
 		
    There are two files in this folder. One is a feature ensemble csv file. The other is a csv file with ensemble scores. Feature ensemble is created using a feature ensemble scoring function based on the rankings of five base feature selection methods. A feature ranked higher by multiple methods will receive a higher ensemble score. 
    
-8. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all selected feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter sets are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
+8. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all selected feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter sets are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step can take longer to complete.
 
 Here is a sample code for stet 7:
 
@@ -215,18 +215,18 @@ B. Location: --> ./pipe_step_4_clf/result_auc_for_each_position/
 		
 	
 
-9. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values. When this step is executed, the program searches for the folder where it saves the classifier evaulation results to retrieve the AUC values of ROC curves. Then, it will list those files along with the number of times each ranked and re-ordered file was evaluated for an AUC. Please, recall that you have specified the top number of features (less than the total number of features in input file) during the step 6. Depending on this value, the range of top feature values that we can generate bar plots can be different. For an example, if a user specifies too low number of top features to be investigated, it is possible the feature aggregate called At_Least5.csv to have too few number of features. It is possible that top few features ranked by five feature selection methods to not have a large intersection. Following this logic, the ability to create bar plot for a wide range of feature sets may be limited. In other words, although certain feature ranked files may generate AUC values for the entire range of the features, there will be some aggregates where there will be few number of features. If there is no data points for some of the files for a high value of top features, bar charts will not be created for that top features.
+9. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values. When this step is executed, the program searches for the folder where it saves the classifier evaulation results to retrieve the AUC values of ROC curves. 
 
 		bash ./run_step_5_barplots_without_bootstrapping.sh
 
 Output files: 
 	Location: --> ./pipe_step_4_clf/result_bar_plots/
-	Description: This folder will contain image PDF files. They are bar graphs showing performances of ranked features, feature aggregates, and the featuer ensemble. X axis contains file names whereas the Y axis contain the AUC values.
+	Description: This folder contains PDF files. They are bar graphs showing performances of ranked features, feature aggregates, and the featuer ensemble. X axis is feature aggregation methods and Y axis is the AUC values.
 	
 *Output file locations*
 *=====================*
 
-Feature Ranked input files
+Ranked Feature input files
 ./pipe_step_2_FS/pipe_step_2_output/
 
 Venn Diagrams and Ranked Feature Combinations
@@ -245,15 +245,15 @@ Once finising step 9, **Running bash ./run_step_0_clean.sh** to remove the resul
 
 **Option 2: run BEAR with bootstrapping**
 
-1. To run BEAR with bootstrapping, you must run the script run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments. Please, note that each time this method will generate different results due to randomness of sampling.
+1. To run BEAR with bootstrapping using script run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments. 
 
-   argument 1 = input csv file.
+   argument 1: input csv file.
    
-   argument 2 = Sampling Fraction: Fraction of the features to be used. This should strictly be a value between 0 and 1. It can be 1 as   well. 
+   argument 2: fraction of the features to be used. This should strictly be a value between 0 and 1. It can be 1 as well. 
    
-   argument 3 = Number of bootstrap samples to draw from data file. This value should strictly be integer.
+   argument 3: number of bootstrap samples to draw from data file. This value should strictly be integer.
    
-   argument 4 = This argument should be specified as yes or no. Here, user has the chance to specify the positive class. If you provide yes as the fourth argument, it will assign one of the class labels as positive class and the other one as the negative one. If you provided no as the argument, the opposite will happen. Use will be displayed which class was assigned as positive class. 
+   argument 4: this argument should be specified as yes or no. Here, user has the chance to specify the positive class (yes). 
    
    e.g., 
    
@@ -261,7 +261,8 @@ Once finising step 9, **Running bash ./run_step_0_clean.sh** to remove the resul
 	bash ./run_bootstrapping_substep_1.sh input_file/Randomized.iris.data.2.class.csv 0.3 10 yes
 	```
 	
-	During execution of the script, user will be shown some useful information.
+	During execution of the script, somee parameters used will be shown.
+	
 	1. Number of features in input file.
 	2. Number of samples in input file.
 	3. User-specified sampling fraction.
@@ -269,15 +270,15 @@ Once finising step 9, **Running bash ./run_step_0_clean.sh** to remove the resul
 	5. The class labels.
 	6. positive class label (indicated as 1).
 	7. Table of feature aggregates created as a result of bootstrapping.
-		This table contains the number of features each aggregate contains. The same information will be shown as percentage.
+		This table contains the number of features each bootstrapped sample contains. The same information will be shown as percentage.
 		This is to help the user to pick the optimum aggregate user wants to further investigate.
 	At the end of the execution of this script, user will be asked to run the next script.
 	
-2. In this step, user need to provide the file to be used to further processing. User should run the bash script named ./run_bootstrapping_substep_2.sh. Then, the program will prompt user an enumerated menu of file aggregates created. User has to select the number from the table and hit enter. This will copy the chosen file to the folder next up for processing.
+2. Run ./run_bootstrapping_substep_2.sh. The script will prompt user an enumerated menu of files of bootstrapped samples. User has to select the number from the table and hit enter. This enable script to copy the chosen file to approparite folder for processing further.
 
 e.g., 
 	```
 	bash ./run_bootstrapping_substep_2.sh
 	```
 	
-3. Next Step is to run the feature selection. Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the script "run_step_2_FeatureSelection.sh").
+3. Run the feature selection on bootstrapped samples. Please, follow the Option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the script "run_step_2_FeatureSelection.sh").
