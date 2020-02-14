@@ -101,6 +101,11 @@ Here is an example command to run feature selection on sample input file "Random
 
 	bash ./run_pipeline.sh input_file/Randomized.iris.data.2.class.csv
 
+Output files: 
+	Location -> ./pipe_step_2_FS/pipe_step_2_output/
+	Description: The output files are five csv files each with features re-ordered according to feature ranksings (1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity). The final column of the csv file contain the class labels. 
+	
+
 6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
    This script allows user to pick top n features for each base feature selection method by specifying a numeric argument. 
    Then, five sets of top n features will be used for Venn diagrams, feature aggregation, and feature ensemble.
@@ -108,6 +113,18 @@ Here is an example command to run feature selection on sample input file "Random
    For example, following script picks top 30 ranked features:
    
    	bash ./run_step_3_vennDiFeAEns_without_bootstrapping.sh 30
+	
+Output files: 
+	A. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDiagram/
+		Description: 
+			a. There will a PDF file of a 5-way Venn diagram and, 
+			b. a text file containing features that belongs to the different portions of the Venn diagram.
+	B. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/
+		Description: 
+			a. This output location will contain five different feature aggregates: 1). at_Least.1.csv, 2). at_Least.2.csv, 3).at_Least.3.csv, 4). at_Least.4.csv, 5).at_Least.5.csv.
+			The file at_Least.1.csv is same as the union of features.
+			The file at_Least.5.csv the same as the intersection of features.
+			What are at_Least files in general? For an example, what is at_Least.3.csv file? It contains all features that are present in at least 3 feature selection methods out of the five being considered. We do not consider which three feature selection methods. Any feature in that file has to be present in at least any 3 of the feature selection methods. This is a heuristic we use to narrow down our feature space.
    
 7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
 
