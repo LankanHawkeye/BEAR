@@ -1,5 +1,6 @@
 
 # -*- coding: utf-8 -*-
+# File created by Miyuraj Harishchandra Hikkaduwa Withanage
 print("Information Gain Ratio Feature Selection Started.")
 import sys
 input_file=sys.argv[1]
