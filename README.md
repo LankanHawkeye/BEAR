@@ -120,7 +120,8 @@ Output files:
 	
    The output files are five csv files each with features re-ordered according to feature ranksings (1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity). The final column of the csv file contain the class labels.
 	
-	*Left most columns of csv files will contain top ranked where as the right most columns will contain low ranked features. We will be using this tradition throughout the description.*
+	** Left most columns of csv files will contain top ranked where as the right most columns will contain low ranked features. 
+	We will be using this tradition throughout the description. **
 	
 
 6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
