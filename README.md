@@ -66,7 +66,9 @@ __________________________
 
 2. Download the BEAR pipeline as a zipped file (BEAR-master.zip) and unzip it to your machine.
 	
+	```
 	unzip BEAR-master.zip
+	```
 	
 3. Access the BEAR-master folder and run Install.sh. 
 	
