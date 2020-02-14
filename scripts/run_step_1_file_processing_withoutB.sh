@@ -1,4 +1,6 @@
 #cleaning any previous work
+scp ./scripts/configuration.py ./pipe_step_2_FS/pipe_step_2_scripts/configuration.py
+
 echo "Clearning any previous files"
 rm -f -v ./pipe_step_2_FS/pipe_step_2_output/*csv
 rm -f -v ./pipe_step_3_FAggregation/pipe_step_3_Fselected_input/*csv
