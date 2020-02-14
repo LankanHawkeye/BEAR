@@ -128,7 +128,7 @@ Output files:
 	We will be using this tradition throughout the description. **
 	
 
-6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
+7. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh".
    This script allows user to pick top n features for each base feature selection method by specifying a numeric argument. 
    Then, five sets of top n features will be used for Venn diagrams, feature aggregation, and feature ensemble.
    
@@ -159,7 +159,7 @@ Description:
    There will be two files in this folder. One is a feature ensemble csv file. Other one is a csv file with ensemble scores. Feature ensemble is created using feature ensemble scoring function. each and every the features is given a score based on the ranking based on five feature selection methods. A feature ranked as one of the top features by multiple methods get a higher score thus, they will be treated as important features by the scoring function. Then, all the features are re-ordered in descending order of the enseble score. The ensemble scoring matrix is the other csv file. 
 		
    
-7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
+8. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
 
 Here is a sample code for stet 7:
 
@@ -180,7 +180,7 @@ B. Location: --> ./pipe_step_4_clf/result_auc_for_each_position/
 		
 	
 
-8. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values. When this step is executed, the program will search the folder where it saves the classifier evaulation results to retrieve the AUC values of ROC curves. Then, it will list those files along with the number of times each ranked and re-ordered file was evaluated for an AUC. Please, recall that you have specified the top number of features (less than the total number of features in input file) during the step 6. Depending on this value, the range of top feature values that we can generate bar plots can be different. For an example, if a user specifies too low number of top features to be investigated, it is possible the feature aggregate called At_Least5.csv to have too few number of features. It is possible that top few features ranked by five feature selection methods to not have a large intersection. Following this logic, the ability to create bar plot for a wide range of feature sets may be limited. In other words, although certain feature ranked files may generate AUC values for the entire range of the features, there will be some aggregates where there will be few number of features. If there is no data points for some of the files for a high value of top features, bar charts will not be created for that top features.
+9. Run "run_step_5_barplots_without_bootstrapping.sh" to generate bar plots of selected AUC values. When this step is executed, the program will search the folder where it saves the classifier evaulation results to retrieve the AUC values of ROC curves. Then, it will list those files along with the number of times each ranked and re-ordered file was evaluated for an AUC. Please, recall that you have specified the top number of features (less than the total number of features in input file) during the step 6. Depending on this value, the range of top feature values that we can generate bar plots can be different. For an example, if a user specifies too low number of top features to be investigated, it is possible the feature aggregate called At_Least5.csv to have too few number of features. It is possible that top few features ranked by five feature selection methods to not have a large intersection. Following this logic, the ability to create bar plot for a wide range of feature sets may be limited. In other words, although certain feature ranked files may generate AUC values for the entire range of the features, there will be some aggregates where there will be few number of features. If there is no data points for some of the files for a high value of top features, bar charts will not be created for that top features.
 
 		bash ./run_step_5_barplots_without_bootstrapping.sh
 
@@ -205,7 +205,7 @@ Ranked Feature Combinations
 
 
 
-Once finising step 8, **Running bash ./run_step_0_clean.sh** to remove the results in the folder (Recomended when user has copied all the results to his/her own folders and is ready to perform a new analysis).
+Once finising step 9, **Running bash ./run_step_0_clean.sh** to remove the results in the folder (Recomended when user has copied all the results to his/her own folders and is ready to perform a new analysis).
 
 
 **Option 2: run BEAR with bootstrapping**
@@ -245,4 +245,4 @@ e.g.,
 	bash ./run_bootstrapping_substep_2.sh
 	```
 	
-3. Next Step is to run the feature selection. Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh").
+3. Next Step is to run the feature selection. Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the script "run_step_2_FeatureSelection.sh").
