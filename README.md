@@ -248,13 +248,13 @@ Once finising step 9, **Running bash ./run_step_0_clean.sh** to remove the resul
 
 **Option 2: run BEAR with bootstrapping**
 
-1. To run BEAR with bootstrapping using script run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments. 
+1. Run run_bootstrapping_substep_1.sh. This script takes 4 commandline arguments. 
 
    argument 1: input csv file.
    
    argument 2: fraction of the features to be used. This should strictly be a value between 0 and 1. It can be 1 as well. 
    
-   argument 3: number of bootstrap samples to draw from data file. This value should strictly be integer.
+   argument 3: number of bootstrap samples (sample size) to draw from data file. This value should strictly be integer.
    
    argument 4: this argument should be specified as yes or no. Here, user has the chance to specify the positive class (yes). 
    
