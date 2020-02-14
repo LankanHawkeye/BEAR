@@ -11,7 +11,8 @@ import weka.core.jvm as jvm
 from weka.core.converters import Loader, Saver
 #jvm.start(system_cp=True, packages=True)
 #need to give the weka installation location
-jvm.start(packages="/anaconda3/lib/python3.7/site-packages/weka/")
+from  configuration import weka_location_in_anaconda
+jvm.start(packages=weka_location_in_anaconda)
 from weka.attribute_selection import ASSearch, ASEvaluation, AttributeSelection
 loader = Loader(classname="weka.core.converters.CSVLoader")
 dataset_DP2 = pd.read_csv(input_file)
