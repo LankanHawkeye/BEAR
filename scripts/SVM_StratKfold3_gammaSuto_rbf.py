@@ -1,5 +1,4 @@
-# this script is woriking fine.
-# it is used to create the SVM curve for a given ranked feature set
+# File created by Miyuraj Harishchandra Hikkaduwa Withanage
 
 print("SVM Classification Started.")
 import numpy as np
