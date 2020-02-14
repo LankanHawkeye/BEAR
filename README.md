@@ -114,11 +114,11 @@ bash ./run_step_2_FeatureSelection.sh
 ```
 
 Output files: 
- 	Location -> ./pipe_step_2_FS/pipe_step_2_output/
+   Location -> ./pipe_step_2_FS/pipe_step_2_output/
  
-        Description: 
+   Description: 
 	
-	The output files are five csv files each with features re-ordered according to feature ranksings (1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity). The final column of the csv file contain the class labels.
+   The output files are five csv files each with features re-ordered according to feature ranksings (1. Pearson's correlation, 2. Information Gain, 3. Information Gain Ratio, 4. Relief, and 5. Symmetrical Uncertainity). The final column of the csv file contain the class labels.
 	
 	*Left most columns of csv files will contain top ranked where as the right most columns will contain low ranked features. We will be using this tradition throughout the description.*
 	
@@ -132,26 +132,26 @@ Output files:
    	bash ./run_step_3_vennDiFeAEns_without_bootstrapping.sh 30
 	
 Output files: 
-	A. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDiagram/
+A. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_venn/output_vennDiagram/
 	
-		Description: 
+   Description: 
 		
-			a. There will a PDF file of a 5-way Venn diagram and, 
-			b. a text file containing features that belongs to the different portions of the Venn diagram.
+   There will a PDF file of a 5-way Venn diagram and, 
+   a text file containing features that belongs to the different portions of the Venn diagram.
 			
-	B. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/
+B. Location: --> ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/
 	
-		Description: 
-			a. This output location will contain five different feature aggregates: 1). at_Least.1.csv, 2). at_Least.2.csv, 3).at_Least.3.csv, 4). at_Least.4.csv, 5).at_Least.5.csv.
+Description: 
+	This output location will contain five different feature aggregates: 1). at_Least.1.csv, 2). at_Least.2.csv, 3).at_Least.3.csv, 4). at_Least.4.csv, 5).at_Least.5.csv.
 			The file at_Least.1.csv is same as the union of features.
 			The file at_Least.5.csv the same as the intersection of features.
 			What are at_Least files in general? For an example, what is at_Least.3.csv file? It contains all features that are present in at least 3 feature selection methods out of the five being considered. We do not consider which three feature selection methods. Any feature in that file has to be present in at least any 3 of the feature selection methods. This is a heuristic we use to narrow down our feature space.
 			
-	C. Location --> ./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/ensemble_output/
+ C. Location --> ./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/ensemble_output/
 		
-		Description: 
+   Description: 
 		
-		There will be two files in this folder. One is a feature ensemble csv file. Other one is a csv file with ensemble scores. Feature ensemble is created using feature ensemble scoring function. each and every the features is given a score based on the ranking based on five feature selection methods. A feature ranked as one of the top features by multiple methods get a higher score thus, they will be treated as important features by the scoring function. Then, all the features are re-ordered in descending order of the enseble score. The ensemble scoring matrix is the other csv file. 
+   There will be two files in this folder. One is a feature ensemble csv file. Other one is a csv file with ensemble scores. Feature ensemble is created using feature ensemble scoring function. each and every the features is given a score based on the ranking based on five feature selection methods. A feature ranked as one of the top features by multiple methods get a higher score thus, they will be treated as important features by the scoring function. Then, all the features are re-ordered in descending order of the enseble score. The ensemble scoring matrix is the other csv file. 
 		
    
 7. Run "run_step_4_clfEvaluation_without_bootstrapping.sh". This step evaluates all picked feature sets from step 6, which is obtained based on the classification performance measured by the area under curve (AUC) value of the classification ROC curve. Three classifiers (NB, SVM, and RF) with default parameter set are used. More advanced users can modify the parameter sets of these classifiers by editing their corresponding python scripts. Depending on the dataset and the parameters in the classifiers, this step cann take longer to complete.
@@ -161,17 +161,17 @@ Here is a sample code for stet 7:
 	bash ./run_step_4_clfEvaluation_without_bootstrapping.sh
 	
 Output files: 
-	A. Location: --> ./pipe_step_4_clf/result_classifier_evalutions/
+A. Location: --> ./pipe_step_4_clf/result_classifier_evalutions/
 		
-		Description: 
+   Description: 
 		
-		This folder will contain three PDF image files. They are graphs of AUC values progressively calculated over the ranks (X axis) from top ranks to low ranks. Y axis represent the AUC value reported.
+   This folder will contain three PDF image files. They are graphs of AUC values progressively calculated over the ranks (X axis) from top ranks to low ranks. Y axis represent the AUC value reported.
 		
-		B: Location: --> ./pipe_step_4_clf/result_auc_for_each_position/
+B. Location: --> ./pipe_step_4_clf/result_auc_for_each_position/
 		
-		Description: 
+   Description: 
 		
-		This folder will contain a text file with file names and AUC values. 
+   This folder will contain a text file with file names and AUC values. 
 		
 	
 
