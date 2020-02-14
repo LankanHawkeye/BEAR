@@ -1,5 +1,5 @@
-# this script is woriking fine.
-# it is used to create the SVM curve for a given ranked feature set
+# File created by Miyuraj Harishchandra Hikkaduwa Withanage
+# 
 
 print("Naive Bayes Classifier Started.")
 import numpy as np
