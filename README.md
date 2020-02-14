@@ -129,7 +129,10 @@ A sample input data file "Randomized.iris.data.2.class.csv" can be found in "inp
 
 Note that, user has option to run BEAR with or without bootstrapping. 
 
-	We have created an interactive script to walk you through the first steps of each of the two steps. This will give the user a substantial idea about the arguments being passed into the scripts at the very begining. To start the interactive mode, run "Start_interactive_mode.sh" bash script. This script will interact with user to get the parameters and file selection.
+	We have created an interactive script to walk you through the first steps of each of the two options. 
+	This will give the user a substantial idea about the arguments being passed into the scripts at the very begining. 
+	To start the interactive mode, run "Start_interactive_mode.sh" bash script. 
+	This script will interact with user to get the parameters and file selection.
 	
 	bash ./Start_interactive_mode.sh
 
