@@ -20,7 +20,7 @@ csv_option_list_help_list=[]
 # short names for menu display
 csv_option_list_help_list_shortnames=[]
 # Iterate through all the csv files
-print(os.getcwd())
+#print(os.getcwd())
 #exit()
 os.chdir('./pipe_step_1_Bootstrapping/output_feature_aggregates')
 csvFiles = sorted(glob.glob('*.csv'))
