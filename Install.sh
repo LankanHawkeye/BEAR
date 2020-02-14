@@ -33,14 +33,14 @@ scp ./scripts/InformationGainRatio_Fselection.py ./pipe_step_2_FS/pipe_step_2_sc
 scp ./scripts/Inforgain_Fselection.py ./pipe_step_2_FS/pipe_step_2_scripts/Inforgain_Fselection.py
 
 scp ./scripts/ensemble_weighting.py ./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/ensemble_weighting.py
-scp ./scripts/pipe_step_3_FA.sh ./pipe_step_3_FAggregation/pipe_step_3_FA.sh
+
 scp ./scripts/create_venn.py ./pipe_step_3_FAggregation/pipe_step_3_make_venn/create_venn.py
 
 scp ./scripts/RandomForest_classifier_allfiles.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/RF/RandomForest_classifier_allfiles.py
 scp ./scripts/SVM_StratKfold3_gammaSuto_rbf.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/SVM/SVM_StratKfold3_gammaSuto_rbf.py
 scp ./scripts/preprocess_class_labels_for_classifiers.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/preprocess_script/preprocess_class_labels_for_classifiers.py
 scp ./scripts/NaiveBayes.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/NB/NaiveBayes.py
-scp ./scripts/pipe_step_4_clf.sh ./pipe_step_4_clf/pipe_step_4_clf.sh
+
 
 scp ./scripts/Bar_Plot.py ./pipe_step_4_clf/result_auc_for_each_position/Bar_Plot.py
 
