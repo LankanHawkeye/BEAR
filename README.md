@@ -272,16 +272,14 @@ Once finising step 9, **Running bash ./run_step_0_clean.sh** to remove the resul
 	4. User-specified number of bootstrap samples.
 	5. The class labels.
 	6. positive class label (indicated as 1).
-	7. Table of feature aggregates created as a result of bootstrapping.
-		This table contains the number of features each bootstrapped sample contains. The same information will be shown as percentage.
-		This is to help the user to pick the optimum aggregate user wants to further investigate.
-	At the end of the execution of this script, user will be asked to run the next script.
+	7. Table of samples with feature aggregated from bootstrapped samples. This table contains bootstrapped samples with information about number of features and percentage when compared to total number of features.
+		
 	
-2. Run ./run_bootstrapping_substep_2.sh. The script will prompt user an enumerated menu of files of bootstrapped samples. User has to select the number from the table and hit enter. This enable script to copy the chosen file to approparite folder for processing further.
+2. Run ./run_bootstrapping_substep_2.sh. The script will prompt user an menu of enumerated files of bootstrapped samples. User has to select a file from the table. This enable script to copy the chosen file to approparite folder for processing further.
 
 e.g., 
 	```
 	bash ./run_bootstrapping_substep_2.sh
 	```
 	
-3. Run the feature selection on bootstrapped samples. Please, follow the Option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the script "run_step_2_FeatureSelection.sh").
+3. Run the feature selection on bootstrapped samples. Please follow the Option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the script "run_step_2_FeatureSelection.sh") to the end (step 9).
