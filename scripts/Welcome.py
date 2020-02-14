@@ -34,7 +34,7 @@ if option1 == 1:
     print("Following are the csv files in your input_file folder")
     print("-------------------------------------------------")
     currentwd = os.getcwd()
-    print(currentwd)
+    #print(currentwd)
 
 
     # long names for copying to feature selection folder
@@ -56,7 +56,7 @@ if option1 == 1:
         print(str(filepicker + 1) + ". " + csvFiles[filepicker])
 
     os.chdir('../pipe_step_2_FS/pipe_step_2_input/')
-    #print(os.getcwd())
+
 
     destination_dir = os.getcwd()
     destination_file = destination_dir + "/input.csv"
@@ -95,7 +95,7 @@ elif option1 == 2:
     csv_option_list_help_list_shortnames = []
     # Iterate through all the csv files
     os.chdir(currentwd+'/input_file/')
-    print(os.getcwd())
+    
 
     csvFiles = sorted(glob.glob('*.csv'))
     for filepicker in range(0, len(csvFiles)):
