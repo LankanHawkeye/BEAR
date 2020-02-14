@@ -87,7 +87,7 @@ __________________________
 	```
 	sudo ./Install.sh
 	```
-	After you run Install.sh script, you may need to edit the **configuration file**. Configuration file is located in the folder configuration in the BEAR-master working folder. It is located as,
+	After runnung Install.sh script, you may need to edit the **configuration file**. Configuration file is located in the folder configuration in the BEAR-master working folder. It is located as,
 	
 		*./configuration/configuration.py*
 	You may have to edit the file to include an alternative Weka home directory. the defulat configuration file contain the following.
@@ -100,7 +100,7 @@ __________________________
 		
 		After saving the file, you can start running the program. Each program will place the configuration file in the relevent folder (./pipe_step_2_FS/pipe_step_2_scripts/) as the first thing. You can manually check and place this file in relevent location to make sure if you wish. 
 		
- *Setting your Python Interpreter.*
+ *Set your Python Interpreter.*
 The default location for python interpreter for these scripts is 
 
 		/usr/local/bin/python3.7
