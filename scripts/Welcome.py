@@ -78,8 +78,8 @@ if option1 == 1:
     os.system("scp {0} {1}".format(str(csv_option_list_help_list[chosen_file - 1]), destination_file))
     print("Next Step is to run the feature selection. ")
     print("Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (See https://github.com/biocoms/BEAR/blob/master/README.md)")
-    print("6. Run the run_step_3_vennDiFeAEns_without_bootstrapping.sh")
-    print("example: bash ./run_step_2_FeatureSelection.sh")
+    print("6.run_step_2_FeatureSelection.sh")
+    print("Example: bash ./run_step_2_FeatureSelection.sh")
     exit()
 
 elif option1 == 2:
@@ -133,7 +133,8 @@ elif option1 == 2:
     print("Next Step is to run the feature selection. ")
     print(
         "Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (See https://github.com/biocoms/BEAR/blob/master/README.md)")
-    print("6. Run the run_step_3_vennDiFeAEns_without_bootstrapping.sh")
+    print("6.run_step_2_FeatureSelection.sh")
+    print("Example: bash ./run_step_2_FeatureSelection.sh")
     exit()
 
 else:
