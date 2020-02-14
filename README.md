@@ -84,6 +84,19 @@ __________________________
 	```
 	sudo ./Install.sh
 	```
+	After you run Install.sh script, you may need to edit the **configuration file**. Configuration file is located in the folder configuration in the BEAR-master working folder. It is located as,
+	
+		*./configuration/configuration.py*
+	You may have to edit the file to include an alternative Weka home directory. the defulat configuration file contain the following.
+	
+		weka_location_in_anaconda="/anaconda3/lib/python3.7/site-packages/weka/"
+		
+		Depending on your weka installing, you may have to modify the path accordingly. to modify,
+		
+		nano ./configuration/configuration.py
+		
+		After saving the file, you can start running the program. Each program will place the configuration file in the relevent folder (./pipe_step_2_FS/pipe_step_2_scripts/) as the first thing. You can manually check and place this file in relevent location to make sure if you wish. 
+
 4. Place your own data to be processed in the following folder.
 
 	Foldername:  input_file
