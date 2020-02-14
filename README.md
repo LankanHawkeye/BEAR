@@ -64,8 +64,20 @@ __________________________
 		
 		Installation instructions: https://pypi.org/project/venn/
 
-2. Download the BEAR pipeline as a zipped file and unzip it to your machine.
-3. cd ./BEAR_CommandLine
+2. Download the BEAR pipeline as a zipped file (BEAR-master.zip) and unzip it to your machine.
+	
+	unzip BEAR-master.zip
+	
+3. Access the BEAR-master folder and run Install.sh. 
+	
+	cd ./BEAR-master 
+	
+	bash ./Install.sh
+	
+	or
+	
+	sudo ./Install.sh
+	
 4. Place your own data to be processed in the following folder.
 
 	Foldername:  input_file
