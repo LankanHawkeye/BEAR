@@ -111,7 +111,7 @@ for comboSize in range(1,len(sets)+1):
 #    "Played at hikka": {"miyu", "Carlos Santana", "Keith Moon"},
 #    "Played at matara": {"miyu", "nadee", "Keith Moon"}
 #}
-print(venn_dictionary)
+#print(venn_dictionary)
 venn(venn_dictionary)
 plt.title('Venn Diagram - Top '+str(cutoff)+' Ranked Features')
 plt.savefig("./output_vennDiagram/VennDiragm.pdf")
