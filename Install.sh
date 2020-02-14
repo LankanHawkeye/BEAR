@@ -24,6 +24,7 @@ mkdir -p ./pipe_step_4_clf/result_auc_for_each_position
 mkdir -p ./pipe_step_4_clf/result_classifier_evalutions
 
 scp ./scripts/configuration.py ./configuration/configuration.py
+scp ./scripts/configuration.py ./pipe_step_2_FS/pipe_step_2_scripts/configuration.py
 
 scp ./scripts/Correlation_Fselection.py ./pipe_step_2_FS/pipe_step_2_scripts/Correlation_Fselection.py
 scp ./scripts/SymmetricalUncert_Fselection.py ./pipe_step_2_FS/pipe_step_2_scripts/SymmetricalUncert_Fselection.py
