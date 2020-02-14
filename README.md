@@ -241,4 +241,4 @@ e.g.,
 	bash ./run_bootstrapping_substep_2.sh
 	```
 	
-3. Next Step is to run the feature selection. Please, follow the above procedure from Feature selection.
+3. Next Step is to run the feature selection. Please, follow the option 1 (run BEAR without bootstrapping) pipeline from step 6 (6. Run the "run_step_3_vennDiFeAEns_without_bootstrapping.sh").
