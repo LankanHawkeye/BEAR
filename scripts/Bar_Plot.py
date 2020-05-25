@@ -1,4 +1,4 @@
-# File created by Miyuraj Harishchandra Hikkaduwa Withanage
+
 
 import matplotlib.pyplot as plt;plt.rcdefaults()
 import numpy as np
@@ -12,7 +12,7 @@ import os
 top = 1
 
 
-def create_bar_plot(path,filename_variable):
+def create_bar_plot(top,path,filename_variable):
     os.chdir(path)
     filepath = filename_variable
     NAMECLF = str(filepath).replace('_AUC.txt', '')
@@ -106,7 +106,7 @@ def create_bar_plot(path,filename_variable):
 
     # print(NAMECLF)
     plt.title(NAMECLF + ' - Bar Chart of AUC Values for top ' + str(top) + ' features')
-    plt.tick_params(labelsize=7)
+    plt.tick_params(labelsize=5)
     plt.xticks(rotation=20)
     # plt.legend(loc='best')
     plt.savefig("../result_bar_plots/" + NAMECLF + "_Barplot_AUC.pdf")
@@ -185,10 +185,12 @@ def checking_feature_numbers(path,filename_fixed):
         print("You typed " + Join)
         AUC_list = []
         # Negative ne is added because list start at zero index
-        top = int(Join) - 1
-        create_bar_plot('.', 'ComplementNB_AUC.txt')
-        create_bar_plot('.', 'RF_AUC.txt')
-        create_bar_plot('.', 'SVM_AUC.txt')
+        #top = int(Join) - 1
+        top = int(Join)
+        create_bar_plot(top,'.', 'ComplementNB_AUC.txt')
+        create_bar_plot(top,'.', 'RF_AUC.txt')
+        create_bar_plot(top,'.', 'SVM_AUC.txt')
+        return top
     else:
         print("Please, input a valid number of top features. Review above guideleines and re-run the program.")
         fp.close()
