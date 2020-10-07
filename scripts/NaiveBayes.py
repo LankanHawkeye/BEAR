@@ -49,7 +49,7 @@ for filepicker in range(0, len(csvFiles)):
     # creating different feature sets by increamenting the size of feature set
     for iterator in range(1, dataCSV_dummy.shape[1]):
 
-
+        print(iterator)
         # feature set
         X = allData = dataCSV_dummy[:, 0:iterator]
 
@@ -113,7 +113,10 @@ for filepicker in range(0, len(csvFiles)):
 
     # At this point we have AUC values for each csv file
     # This is a Pandas dataframe
-    NB_AUC[csvFiles[filepicker].replace('.csv','')] = NB_ROC_AUC_list
+    print(csvFiles[filepicker].replace('.csv',''))
+    print(len(NB_ROC_AUC_list))
+    print(NB_ROC_AUC_list)
+    NB_AUC[csvFiles[filepicker].replace('.csv','_NB')] = list(np.asarray(NB_ROC_AUC_list))
 
     NB_ROC_AUC_list = np.asarray(NB_ROC_AUC_list)
 
@@ -136,8 +139,3 @@ for filepicker in range(0, len(csvFiles)):
 NB_AUC.to_csv('../../result_auc_for_each_position/ComplementNB_AUC.csv',sep=',',index=False,header=True)
 
 print("Naive Bayes Classification Complete.")
-
-
-
-
-

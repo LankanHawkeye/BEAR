@@ -40,7 +40,7 @@ def feature_preprocess(path):
     PATHNAME_1 = PATHNAME_1.replace('/', '')
     print("Creating numeric class labels for files in "+PATHNAME_1+" folder")
     flat_list = [item for sublist in total_class_labels for item in sublist]
-    class_labels_in_all = list(set(flat_list))
+    class_labels_in_all = sorted(list(set(flat_list)))
     print(class_labels_in_all[0] + " will be modified as 1")
     print(class_labels_in_all[1] + " will be modified as 0")
     os.system("for f in *csv;do sed -i -e 's#'{0}'#1#g' $f;done".format(class_labels_in_all[0]))

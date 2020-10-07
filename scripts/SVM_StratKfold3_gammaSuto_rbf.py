@@ -93,7 +93,7 @@ for filepicker in range(0, len(csvFiles)):
         SVM_list.append(roc_auc)
     # At this point we have AUC values for each csv file
     # This is a Pandas dataframe
-    SVM_AUC[csvFiles[filepicker].replace('.csv', '')] = SVM_list
+    SVM_AUC[csvFiles[filepicker].replace('.csv', '_SVM')] = list(np.asarray(SVM_list))
     SVM_list = np.asarray(SVM_list)
     # Creating X Axis
     xaxis = list(range(1, dataCSV_dummy.shape[1]))
