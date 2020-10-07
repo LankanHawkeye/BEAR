@@ -115,7 +115,7 @@ def functionSVM(path):
     SVC_ROC_AUC_list = []
     for filepicker in range(0, len(csvFiles)):
         # color_count = color_count + 1
-        print(csvFiles[filepicker])
+        #print(csvFiles[filepicker])
         dataCSV = pd.read_csv(os.getcwd() + '/' + csvFiles[filepicker], delimiter=',', header=0)
         dataCSV_dummy = pd.get_dummies(dataCSV)
         dataCSV_dummy = dataCSV_dummy.to_numpy()
