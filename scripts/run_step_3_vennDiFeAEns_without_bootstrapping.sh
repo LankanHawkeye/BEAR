@@ -7,6 +7,7 @@ cd ./pipe_step_3_FAggregation/pipe_step_3_make_venn/
 echo ""
 echo "Venn Diagram Creation and Feature Aggregation Started."
 /usr/local/bin/python3.7 create_venn.py $1
+/usr/local/bin/python3.7 fileAggregate.py
 cd ../..
 echo ""
 #echo "Venn Diagram Creation and Feature Aggregation Complete."
@@ -21,9 +22,9 @@ echo ""
 #echo "Feature Ensemble Creation Complete."
 
 echo ""
-scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/NB/
-scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/SVM/
-scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/RF/
+#scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/NB/
+#scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/SVM/
+#scp ./pipe_step_3_make_aggregates/*csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/RF/
 scp ./pipe_step_3_make_ensemble/ensemble_output/Ensemble.csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/NB/
 scp ./pipe_step_3_make_ensemble/ensemble_output/Ensemble.csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/SVM/
 scp ./pipe_step_3_make_ensemble/ensemble_output/Ensemble.csv ../pipe_step_4_clf/pipe_step_4_clf_clfers/RF/
