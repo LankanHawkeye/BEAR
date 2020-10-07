@@ -35,6 +35,7 @@ scp ./scripts/Inforgain_Fselection.py ./pipe_step_2_FS/pipe_step_2_scripts/Infor
 scp ./scripts/ensemble_weighting.py ./pipe_step_3_FAggregation/pipe_step_3_make_ensemble/ensemble_weighting.py
 
 scp ./scripts/create_venn.py ./pipe_step_3_FAggregation/pipe_step_3_make_venn/create_venn.py
+scp ./scripts/fileAggregate.py ./pipe_step_3_FAggregation/pipe_step_3_make_venn/fileAggregate.py
 
 scp ./scripts/RandomForest_classifier_allfiles.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/RF/RandomForest_classifier_allfiles.py
 scp ./scripts/SVM_StratKfold3_gammaSuto_rbf.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/SVM/SVM_StratKfold3_gammaSuto_rbf.py
