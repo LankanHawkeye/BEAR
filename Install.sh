@@ -37,6 +37,9 @@ scp ./scripts/ensemble_weighting.py ./pipe_step_3_FAggregation/pipe_step_3_make_
 scp ./scripts/create_venn.py ./pipe_step_3_FAggregation/pipe_step_3_make_venn/create_venn.py
 scp ./scripts/fileAggregate.py ./pipe_step_3_FAggregation/pipe_step_3_make_venn/fileAggregate.py
 
+scp ./scripts/CreateAUC_DF.py ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/CreateAUC_DF.py
+scp ./scripts/NB_SVM_functions.py ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/NB_SVM_functions.py
+
 scp ./scripts/RandomForest_classifier_allfiles.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/RF/RandomForest_classifier_allfiles.py
 scp ./scripts/SVM_StratKfold3_gammaSuto_rbf.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/SVM/SVM_StratKfold3_gammaSuto_rbf.py
 scp ./scripts/preprocess_class_labels_for_classifiers.py ./pipe_step_4_clf/pipe_step_4_clf_clfers/preprocess_script/preprocess_class_labels_for_classifiers.py
