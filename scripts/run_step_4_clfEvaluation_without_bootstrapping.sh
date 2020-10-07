@@ -15,8 +15,8 @@ cd ./pipe_step_4_clf_clfers/SVM/
 /usr/local/bin/python3.7 SVM_StratKfold3_gammaSuto_rbf.py
 
 cd ../../
-cd ./pipe_step_4_clf_clfers/RF/
-/usr/local/bin/python3.7 RandomForest_classifier_allfiles.py
+#cd ./pipe_step_4_clf_clfers/RF/
+#/usr/local/bin/python3.7 RandomForest_classifier_allfiles.py
 
 
 echo ""
