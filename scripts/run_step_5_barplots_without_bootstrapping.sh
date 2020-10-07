@@ -1,6 +1,6 @@
 echo "This step can only be run if previous step (run_step_4_clfEvaluation_without_bootstrapping.sh) completed successfully"
 echo "This step generate the summary in ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates"
-cd ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/"
+cd ./pipe_step_3_FAggregation/pipe_step_3_make_aggregates/
 /usr/local/bin/python3.7 CreateAUC_DF.py
 cd ../..
 echo ""
